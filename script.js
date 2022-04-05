@@ -119,13 +119,13 @@ Create a function to test whether an array of integers of length 2 does not cont
 */
 let myArray3 = [1, 2];
 const checkNegArray = (arr) => {
-    if (arr[0] !== 1 || arr[1] !== 3) {
-        return true;
-    } else {
+    if (arr[0] === 1 || arr[1] === 3) {
         return false;
+    } else {
+        return true;
     }
 };
-
+console.log(checkNegArray(myArray3));
 /*
 11)
 
@@ -154,11 +154,28 @@ Types of angles:
     Right angle: An 90 degree angle.
     btuse angle: An angle between 90 and 180 degrees.
     Straight angle: A 180 degree angle.
-
+*/
+const typeOfAngle = (angle) => {
+    if (angle >= 0 && angle < 90) {
+        return "Acute angel";
+    } else if (angle === 90) {
+        return "Right Angle";
+    } else if (angle > 90 && angle < 180) {
+        return "obtuse angle";
+    } else if (angle === 180) {
+        return "straight angle";
+    }
+};
+console.log(typeOfAngle(180));
+/*
 13)
 
 Create a function to find the index of the greatest element of a given array of integers
-
+*/
+const findIndex = (arr) => {
+    
+}:
+/*
 14)
 
 Create a function to get the largest even number from an array of integers.
@@ -193,5 +210,4 @@ this would be "34".
 
 20)
 Create a function that given a phrase returns its acronym, like British Broadcasting Corporation returns BBC
-
 */
