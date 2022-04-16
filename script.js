@@ -72,7 +72,7 @@ let str = "hello world";
 const numberOfCopies = (str, num) => {
     return str.repeat(num);
 };
-//console.log(numberOfCopies(str, 4));
+// console.log(numberOfCopies(str, 4));
 
 /*
 7)
@@ -105,7 +105,12 @@ Create a function to test whether an array of integers of length 2 contains 1 or
 
 let myArray2 = [1, 2];
 const checkArray = (arr) => {
-    if (arr[0] === 1 || arr[1] === 3) {
+    //  if (arr[0] === 1 || arr[1] === 1 || arr[0] === 3 || arr[1] === 3) {
+    //      return true;
+    //  } else {
+    //      return false;
+    //  }
+    if (arr.includes(1) || arr.inculdes(3)) {
         return true;
     } else {
         return false;
@@ -119,13 +124,13 @@ Create a function to test whether an array of integers of length 2 does not cont
 */
 let myArray3 = [1, 2];
 const checkNegArray = (arr) => {
-    if (arr[0] === 1 || arr[1] === 3) {
+    if (arr[0] === 3 || arr[1] === 3 || arr[0] === 1 || arr[1] === 1) {
         return false;
     } else {
         return true;
     }
 };
-console.log(checkNegArray(myArray3));
+//console.log(checkNegArray(myArray3));
 /*
 11)
 
@@ -144,6 +149,26 @@ const findLargestStr = (str1, str2, str3) => {
 };
 //console.log(findLargestStr(myArray4[0], myArray4[1], myArray4[2]));
 //console.log(findLargestStr(myArray4));
+
+const getLongestString = (arr) => {
+    const temp = [];
+    for (let i = 0; i < arr.length; i++) {
+        temp.push(arr[i].length);
+    }
+    const largest = [...temp].sort((a, b) => b - a)[0];
+    const index = temp.indexOf(largest);
+    return arr[index];
+};
+console.log(
+    getLongestString([
+        "dkfjvb",
+        "lisdhfvb",
+        "iebf",
+        "eirbf",
+        "jhfdvjw",
+        "kshvb",
+    ])
+);
 /*
 12)
 
@@ -164,17 +189,17 @@ const typeOfAngle = (angle) => {
         return "obtuse angle";
     } else if (angle === 180) {
         return "straight angle";
+    } else {
+        return "Angle larger than 180 degrees";
     }
 };
-console.log(typeOfAngle(180));
+// console.log(typeOfAngle(181));
 /*
 13)
 
 Create a function to find the index of the greatest element of a given array of integers
 */
-const findIndex = (arr) => {
-    
-}:
+
 /*
 14)
 
